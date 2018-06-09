@@ -19,7 +19,7 @@ const config = {
 module.exports = {
 	entry: {
 		styles: __srcPath + 'scss/scss-entry.js',
-		scripts: __srcPath + 'js/scripts-entry.js',
+		scriptsHome: __srcPath + 'js/scripts-entry.js',
 	},
 	output: {
 		path: path.resolve( __buildPath, 'build' ),

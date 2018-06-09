@@ -1,0 +1,9 @@
+/*! Custom Home Page for Royal Lock */
+
+$fadeInTiming: 0.4s;
+
+.dom_ready {
+  @include transition(opacity $fadeInTiming ease);
+  @include opacity(1);
+}
+

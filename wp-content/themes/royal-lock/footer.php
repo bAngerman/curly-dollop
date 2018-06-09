@@ -11,26 +11,15 @@
 
 ?>
 
-	</div><!-- #content -->
+		</div><!-- #content -->
+		<footer id="bottom" class="footer" <?php if( get_field('footer_background') ) : ?> style="background-image:url('<?php the_field('footer_background'); ?>');"<?php endif; ?>>
+			<div class="site-info">
+				<p>test</p>
+			</div><!-- .site-info -->
+		</footer><!-- #colophon -->
+	</div><!-- #page -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'royal-lock' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'royal-lock' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'royal-lock' ), 'royal-lock', '<a href="https://github.com/bAngerman">Brendan Angerman</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+	<?php wp_footer(); ?>
 
-<?php wp_footer(); ?>
-
-</body>
+	</body>
 </html>
