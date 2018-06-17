@@ -12,9 +12,8 @@
 ?>
 
 		</div><!-- #content -->
-		<footer id="bottom" class="footer" <?php if( get_field('footer_background') ) : ?> style="background-image:url('<?php the_field('footer_background'); ?>');"<?php endif; ?>>
+		<footer class="footer" <?php if( get_field('footer_background') ) : ?> style="background-image:url('<?php the_field('footer_background'); ?>');"<?php endif; ?>>
 			<div class="site-info">
-				<p>test</p>
 			</div><!-- .site-info -->
 		</footer><!-- #colophon -->
 	</div><!-- #page -->

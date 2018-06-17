@@ -1,11 +1,15 @@
 (function($) {
   $(document).on('click', 'a[href^="#"]', function(e) {
     // target element id
-    var id = $(this).attr('href');
+		var id = $(this).attr('href');
+		console.log($(e.target));
+		if ( $(e.target).closest('a').hasClass('carousel-control') ) {
+				return;
+		}
 
     // target element
     var $id = $(id);
-    if ($id.length === 0) {
+    if ($id.length === 0 ) {
         return;
     }
 

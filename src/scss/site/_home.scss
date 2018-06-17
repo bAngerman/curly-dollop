@@ -1,9 +1,22 @@
 /*! Custom Home Page for Royal Lock */
 
-$fadeInTiming: 0.4s;
+$fadeInTiming: 0.3s;
 
-.dom_ready {
+.dom-ready {
   @include transition(opacity $fadeInTiming ease);
   @include opacity(1);
 }
+
+p:empty {
+  display: none;
+}
+
+#page {
+  #content {
+
+  }
+}
+
+
+
 

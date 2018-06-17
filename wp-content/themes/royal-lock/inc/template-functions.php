@@ -36,3 +36,6 @@ function royal_lock_pingback_header() {
 }
 add_action( 'wp_head', 'royal_lock_pingback_header' );
 
+
+show_admin_bar( false );
+

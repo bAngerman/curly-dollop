@@ -8,11 +8,15 @@
  */
 
 get_header();
-
 /**
  * About Section
  */
 get_template_part( 'template-parts/tmpl', 'about' );
+
+/**
+ * Services Summary Section
+ */
+get_template_part( 'template-parts/tmpl', 'faqs' );
 
 /**
  * Services Summary Section

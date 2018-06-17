@@ -2,7 +2,7 @@
 
   // Body Transition
 	$(window).load(function(){
-		$('body').addClass('dom_ready');
+		$('body').addClass('dom-ready');
 	});
 
 }(jQuery));
