@@ -1,0 +1,226 @@
+/*! Custom Home Page for Royal Lock */
+
+$fadeInTiming: 0.5s;
+$skew: 5deg;
+
+.dom-ready {
+  @include transition(all $fadeInTiming ease-in-out);
+  @include opacity(1);
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+img {
+  object-fit: cover;
+  max-width: 100%;
+}
+
+p:empty {
+  display: none;
+}
+a {
+  &:hover {
+    text-decoration: none;
+  }
+  &:active {
+    color: initial;
+  }
+  &:visited {
+    color: initial;
+  }
+}
+
+#content {
+  background-color: $bg-l-gray;
+  .container-outer {
+    @extend %shadow;
+    &:last-of-type {
+      box-shadow: none;
+    }
+    position: relative;
+    z-index: 100;
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: -1px;
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    vertical-align: top;
+
+    -webkit-transform: skewY(-$skew);
+    transform: skewY(-$skew);
+
+    .container-inner {
+      padding: 4rem 0;
+      background-color: $bg-d-gray;
+
+      &.bg-white {
+        background-color: $white;
+      }
+
+      &.bg-d-gray {
+        background-color: $bg-d-gray;
+      }
+
+      &.bg-royal {
+        background-color: $royal;
+      }
+
+      &.bg-l-gray {
+        background-color: $bg-l-gray;
+      }
+
+    }
+    .container {
+      -webkit-transform: skewY($skew);
+      transform: skewY($skew);
+    }
+    @include bp-medium() {
+      .container {
+        padding: 6rem 0;
+      }
+    }
+  }
+
+  .bg-sections {
+    &:nth-of-type(2n) {
+      .container-inner {
+        background-color: $bg-l-gray;
+        h2 {
+          border-color: $bg-d-gray;
+        }
+      }
+    }
+    &:nth-of-type(2n + 1) {
+      .container-inner {
+        color: $white;
+        background-color: $bg-d-gray;
+        h2 {
+          border-color: $white;
+        }
+      }
+    }
+  }
+
+}
+
+.faqs-outer {
+  h3 {
+    text-transform: uppercase;
+  }
+  
+  .carousel-inner {
+    width: 75%;
+    margin: 0 auto;
+    min-height: 200px;
+  }
+}
+
+.service-item {
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+  &:first-of-type {
+    padding-top: 0.9rem;
+  }
+
+  .image-box {
+    position: relative;
+  }
+  img {
+    margin: 0 auto;
+    padding-bottom: 0.4rem;
+  }
+  h3 {
+    color: $white;
+    background-color: $red;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    margin: 0;
+    width: 100%;
+    padding-left: 0.5rem;
+    padding-top: 0.4rem;
+
+    @include bp-small() {
+      position: relative;
+      margin: initial;
+      padding-left: initial;
+      background-color: initial;
+    }
+  }
+  
+}
+.sep {
+  min-height: 2px;
+  width: 80%;
+  background-color: rgba(255,255,255,0.6);
+  margin: 0 auto;
+  @include bp-small() {
+    display: none;
+  }
+}
+
+p:last-of-type {
+  margin-bottom: 0.2rem;
+}
+
+#about {
+  h2 {
+    border-color: $red;
+  }
+  &>a {
+    background-color: $red;
+    @extend %shadow;
+    padding: 0.4rem 0.6rem;
+  }
+}
+.faqs-outer {
+  h3 {
+    border-color: $yellow;
+  }
+  #faq {
+    background-color: $yellow;
+    border-radius: 0;
+    border-color: transparent;
+    font-style: italic;
+  }
+  #faq-answer {
+    background-color: $bg-d-gray;
+    padding: 1rem 2rem;
+    color: $white;
+  }
+}
+#services {
+  color: $white;
+  h2 {
+    border-color: $red;
+  }
+}
+.info {
+  .info-section-outer {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+  }
+}
+#contact {
+  color: $white;
+  h4 {
+    border-color: $red;
+  }
+}
+.contact-us {
+  h4 {
+    color: $white;
+  }
+}
+
+
+
+
+

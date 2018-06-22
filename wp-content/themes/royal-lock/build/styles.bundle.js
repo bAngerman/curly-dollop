@@ -103,9 +103,9 @@ eval("\n\n__webpack_require__(/*! ./style.scss */ \"./src/scss/style.scss\");\n\
   !*** ./src/scss/style.scss ***!
   \*****************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("throw new Error(\"Module build failed: ModuleBuildError: Module build failed: \\r\\nundefined\\r\\n        ^\\r\\n      Undefined variable: \\\"$color--text-screen\\\".\\r\\n      in C:\\\\xampp\\\\htdocs\\\\royal-lock\\\\src\\\\scss\\\\modules\\\\_accessibility.scss (line 19, column 10)\\n    at runLoaders (C:\\\\xampp\\\\htdocs\\\\royal-lock\\\\node_modules\\\\webpack\\\\lib\\\\NormalModule.js:275:20)\\n    at C:\\\\xampp\\\\htdocs\\\\royal-lock\\\\node_modules\\\\loader-runner\\\\lib\\\\LoaderRunner.js:364:11\\n    at C:\\\\xampp\\\\htdocs\\\\royal-lock\\\\node_modules\\\\loader-runner\\\\lib\\\\LoaderRunner.js:230:18\\n    at context.callback (C:\\\\xampp\\\\htdocs\\\\royal-lock\\\\node_modules\\\\loader-runner\\\\lib\\\\LoaderRunner.js:111:13)\\n    at Object.asyncSassJobQueue.push [as callback] (C:\\\\xampp\\\\htdocs\\\\royal-lock\\\\node_modules\\\\sass-loader\\\\lib\\\\loader.js:67:13)\\n    at Object.done [as callback] (C:\\\\xampp\\\\htdocs\\\\royal-lock\\\\node_modules\\\\neo-async\\\\async.js:7974:18)\\n    at options.error (C:\\\\xampp\\\\htdocs\\\\royal-lock\\\\node_modules\\\\node-sass\\\\lib\\\\index.js:294:32)\");\n\n//# sourceURL=webpack:///./src/scss/style.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/scss/style.scss?");
 
 /***/ })
 

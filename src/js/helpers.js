@@ -2,13 +2,21 @@
   $(document).on('click', 'a[href^="#"]', function(e) {
     // target element id
 		var id = $(this).attr('href');
+		
 		console.log($(e.target));
+
 		if ( $(e.target).closest('a').hasClass('carousel-control') ) {
+				return;
+		}
+		if ( $(e.target).closest('a').hasClass('menu-toggle') ) {
 				return;
 		}
 
     // target element
-    var $id = $(id);
+		var $id = $(id);
+		if ($id.selector === '#' ) {
+			return;
+		}
     if ($id.length === 0 ) {
         return;
     }

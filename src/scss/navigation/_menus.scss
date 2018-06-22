@@ -1,0 +1,61 @@
+.menu-toggle {
+	position: absolute;
+	z-index: 9999;
+}
+
+.navi {
+
+	position: absolute;
+	z-index: 8000;
+	@extend %visuallyhidden;
+
+	&.on {
+		margin: auto;
+		height: auto;
+		clip: auto;
+		top: 0px;
+		right: 0px;
+		width: 250px;
+		padding: 12px 26px;
+		padding-top: 50px;
+		background-color: $bg-d-gray;
+		@extend %shadow;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			list-style: none;
+		}
+	}
+
+	@include bp-small() {
+		&, &.on {
+			background-color: transparent;
+			position: relative;
+			margin: auto;
+			padding: inital;
+			width: auto;
+			height: auto;
+			clip: auto;
+			padding: initial;
+			box-shadow: none;
+			ul {
+				li {
+					display: inline-block;
+					margin-right: 6px;
+					padding: 12px;
+				}
+			}
+		}	
+	}
+}
+
+@include bp-small() {
+	nav {
+		display: flex;
+		align-items: center;
+	}	
+}

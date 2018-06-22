@@ -1,0 +1,25 @@
+footer {
+  background-color: $royal;
+  background-size: cover;
+  background-position: -200px;
+  padding: 3rem 0rem;
+  // @include blur(5px);
+  .site-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    a {
+      align-self: center;
+      margin-bottom: 1rem;
+    }
+    .copy {
+      font-family: $f-Roboto-Condensed;
+      text-transform: uppercase;
+      text-align: center;
+      p {
+        font-size: 0.8rem;
+        color: $white;
+      }
+    }
+  }
+}

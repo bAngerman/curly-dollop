@@ -4,38 +4,21 @@
 }
 
 @mixin bp-large {
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (min-width: 1200px) {
     @content;
   }
 }
 
 @mixin bp-medium {
-  @media only screen and (max-width: 992px) {
+  @media only screen and (min-width: 992px) {
     @content;
   }
 }
 
 @mixin bp-small {
-  @media only screen and (max-width: 768px) {
+  @media only screen and (min-width: 768px) {
     @content;
   }
-}
-
-$image-path: '../img' !default;
-$fallback-extension: 'png' !default;
-$retina-suffix: '@2x';
-@mixin background-image($name, $size:false){
-    background-image: url(#{$image-path}/#{$name}.svg);
-    @if($size){
-        background-size: $size;
-    }
-    .no-svg &{
-        background-image: url(#{$image-path}/#{$name}.#{$fallback-extension});
-
-        @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-          background-image: url(#{$image-path}/#{$name}#{$retina-suffix}.#{$fallback-extension});
-        }
-    }
 }
 
 @mixin transition($args...) {
@@ -44,6 +27,10 @@ $retina-suffix: '@2x';
   -ms-transition: $args;
   -o-transition: $args;
   transition: $args;
+}
+
+%ct {
+  @include transition(all 0.2s ease-in-out);
 }
 
 @mixin opacity($opacity) {
@@ -61,4 +48,15 @@ $retina-suffix: '@2x';
   clip: rect(0 0 0 0);
   clip: rect(0, 0, 0, 0);
   position: absolute;
+}
+
+%shadow {
+  box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+}
+@mixin blur( $px ) {
+  -webkit-filter: blur($px);
+  -moz-filter: blur($px);
+  -o-filter: blur($px);
+  -ms-filter: blur($px);
+  filter: blur($px);
 }
