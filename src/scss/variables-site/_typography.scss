@@ -8,16 +8,20 @@ $bold: 700;
 
 html body {
   font-family: $f-Roboto;
-  font-weight: regular;
+  font-weight: $regular;
   font-size: 18px;
 
   -ms-word-wrap: break-word;
   word-wrap: break-word;
-  -webkit-hyphens: auto;
-  hyphens: auto;
-  -ms-hyphens: auto;
   -webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;
+  label {
+    color: $white;
+    font-family: $f-Roboto-Condensed;
+    font-weight: $regular;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
 }
 body{
   section h2  {

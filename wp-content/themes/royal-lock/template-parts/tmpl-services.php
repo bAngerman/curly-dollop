@@ -20,13 +20,13 @@
               <?php if ( $total_rows+1 !== get_row_index() && get_row_index() !== 1 ) : ?>
                   <div class="sep"></div>
               <?php endif; ?>
-              <div class="service-item col-12 col-md-6">
+              <div class="service-item col-4">
                 <div class="image-box">
                 <?php
                 $service_image = get_sub_field('service_image'); 
-
+                $wpImg =  wp_get_attachment_image($service_image, 'large');
                 if ( !empty($service_image) ) : ?>
-                  <img class="logo" src="<?php echo $service_image['url']; ?>" alt="<?php echo $service_image['alt']; ?>">
+                  <?php echo $wpImg; ?>
                 <?php endif; ?>
                   <h3><?php the_sub_field('service_name') ?></h3>
                 </div>

@@ -56,7 +56,7 @@ a {
     transform: skewY(-$skew);
 
     .container-inner {
-      padding: 4rem 0;
+      padding: 4.5rem 0;
       background-color: $bg-d-gray;
 
       &.bg-white {
@@ -82,7 +82,7 @@ a {
     }
     @include bp-medium() {
       .container {
-        padding: 6rem 0;
+        padding: 2rem 0;
       }
     }
   }
@@ -128,10 +128,17 @@ a {
     padding-top: 0.9rem;
   }
 
+  @include bp-small() {
+    & {
+      padding-top: 0.9rem !important;
+    }
+  }
+
   .image-box {
     position: relative;
   }
   img {
+    max-height: 250px;
     margin: 0 auto;
     padding-bottom: 0.4rem;
   }
@@ -153,6 +160,7 @@ a {
       background-color: initial;
     }
   }
+ 
   
 }
 .sep {
@@ -210,13 +218,81 @@ p:last-of-type {
 }
 #contact {
   color: $white;
-  h4 {
+  padding-top: 1rem;
+  h3 {
     border-color: $red;
+  }
+  h4 {
+    margin-bottom: 0;
+    font-size: 1.4rem;
+  }
+  h1 {
+    font-size: 1.6rem;
+    line-height: 1.6rem; 
+  }
+  #googlemap {
+    min-height: 300px;
+    margin-bottom: 1rem;
+  }
+  .phone {
+    color: $red;
+  }
+  .location {
+    &>p>span {
+      display: block;
+    }
   }
 }
 .contact-us {
-  h4 {
+  padding-top: 1rem;
+  h3 {
     color: $white;
+    border-color: $red;
+  }
+}
+
+.wpcf7 {
+  display: flex;
+  justify-content: center;
+  @include bp-medium() {
+    & {
+      display: block;
+    }
+  }
+}
+
+.wpcf7-form {
+  
+  width: 100%;
+  max-width: 400px;
+
+  .wpcf7-form-control {
+    max-width: 100%;
+  }
+
+  label {
+    display: block;
+  }
+  textarea {
+    width: 100%;
+  }
+
+  .wpcf7-submit {
+    display: inline-block;
+    font-family: $f-Roboto-Condensed;
+    text-transform: uppercase;
+    padding: 0.2rem 0.8rem;
+    background-color: $red;
+    color: $white;
+    border-color: transparent;
+    @extend %shadow;
+  }
+  .wpcf7-not-valid-tip {
+    text-transform: none;
+    font-size: 0.8rem;
+  }
+  .wpcf7-text, .wpcf7-textarea {
+    padding: 0.25rem;
   }
 }
 

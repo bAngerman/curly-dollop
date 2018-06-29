@@ -1,38 +1,3 @@
-(function($) {
-  $(document).on('click', 'a[href^="#"]', function(e) {
-    // target element id
-		var id = $(this).attr('href');
-		
-		console.log($(e.target));
-
-		if ( $(e.target).closest('a').hasClass('carousel-control') ) {
-				return;
-		}
-		if ( $(e.target).closest('a').hasClass('menu-toggle') ) {
-				return;
-		}
-
-    // target element
-		var $id = $(id);
-		if ($id.selector === '#' ) {
-			return;
-		}
-    if ($id.length === 0 ) {
-        return;
-    }
-
-    // prevent standard hash navigation (avoid blinking in IE)
-    e.preventDefault();
-
-    // top position relative to the document
-    var pos = $id.offset().top;
-
-    // animated top scrolling
-    $('body, html').animate({ scrollTop: pos }, { duration: 200 });
-	});
-}(jQuery));
-
-
 /**
  * File skip-link-focus-fix.js.
  *

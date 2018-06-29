@@ -41,7 +41,7 @@
 				?>
 			</nav><!-- #site-navigation -->
 		</div>
-		<div class="banner" <?php if( get_field('header_background') ) : ?> style="background-image:url('<?php the_field('header_background'); ?>');"<?php endif; ?>>
+		<div class="banner" <?php if( get_field('header_background') ) : ?> style="background-image:url('<?php $wpImg = wp_get_attachment_image_src( get_field('header_background'), 'large'); echo $wpImg[0]; ?>');"<?php endif; ?>>
 			<div class="wash">
 				<h1><?php the_field('site_name', 'options'); ?></h1>
 				<div class="header-btns">

@@ -11,12 +11,15 @@ function royal_lock_scripts() {
   /**
    * SCRIPTS
    */
-  // jQuery--------
-  wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery-slim.min.js', false, null, false );
+  // jQuery
+  // wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery-slim.min.js', false, null, false );
+  wp_dequeue_script('jquery');
+
+  wp_enqueue_script( 'zepto', get_template_directory_uri() . '/js/zepto.min.js', false, null, false );
 
   // bootstrap stuff
-  wp_enqueue_script( 'popper_js', get_template_directory_uri() . '/js/popper.min.js', false, null, false );
-  wp_enqueue_script( 'bootstrap_js', get_template_directory_uri() . '/js/bootstrap.min.js', array( 'jquery', 'popper_js' ), null, false );
+  // wp_enqueue_script( 'popper_js', get_template_directory_uri() . '/js/popper.min.js', false, null, false );
+  // wp_enqueue_script( 'bootstrap_js', get_template_directory_uri() . '/js/bootstrap.min.js', array( 'zepto', 'popper_js' ), null, false );
 
   
 
@@ -34,7 +37,7 @@ function royal_lock_scripts() {
   wp_enqueue_style( 'royal_lock_style', get_template_directory_uri() . '/build/styles.min.css', false, null, false );
   
   // custom js
-  wp_enqueue_script( 'scripts', get_template_directory_uri() . '/build/scriptsHome.bundle.js', array( 'jquery', 'bootstrap_js' ), null, false );
+  wp_enqueue_script( 'scripts', get_template_directory_uri() . '/build/scriptsHome.bundle.js', array( 'zepto' ), null, false );
   wp_localize_script( 'scripts', 'ajaxscript', $ajax_localization );
 
 }
@@ -47,6 +50,7 @@ function return_ajax($return) {
       wp_die();
   } else {
       return $return;
+      wp_die();
   }
 }
 
@@ -57,7 +61,6 @@ function get_faq() {
   $faqQuestion = $_POST['faq'];
   while ( have_rows('faqs', 'options') ) {
     the_row();
-
     while ( have_rows('faq') ) {
       the_row();
       if ( $faqQuestion == get_sub_field('question') ) {
@@ -65,6 +68,7 @@ function get_faq() {
       } 
     }
   }
+  wp_die();
 }
 
 
