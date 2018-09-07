@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 
-const localDevUrl = 'http://localhost/royal-lock';
+const localDevUrl = 'http://localhost/royallock';
 
 const __buildPath = './wp-content/themes/royal-lock/';
 const __srcPath = './src/';

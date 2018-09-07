@@ -21,12 +21,12 @@ get_template_part( 'template-parts/tmpl', 'faqs' );
 /**
  * Services Summary Section
  */
-get_template_part( 'template-parts/tmpl', 'services' );
+//get_template_part( 'template-parts/tmpl', 'services' );
 
 /**
  * Services Tabs Section
  */
-get_template_part( 'template-parts/tmpl', 'sections' );
+//get_template_part( 'template-parts/tmpl', 'sections' );
 
 /**
  * Contact Section

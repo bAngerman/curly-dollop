@@ -31,7 +31,7 @@
 				<a href="<?php echo home_url(); ?>"><img class="logo" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>"></a>
 			<?php endif; ?>
 
-			<a href="#" class="menu-toggle"><i class="fas fa-bars fa-2x"></i></a>
+			<a href="#" class="menu-toggle"><i class="fas fa-bars"></i></a>
 			<nav>
 				<?php
 				wp_nav_menu( array(
@@ -49,10 +49,10 @@
 					$btn1 = get_field('header_button_1');
 					$btn2 = get_field('header_button_2');
 					if( $btn1 ) : ?>
-						<a href="<?php echo $btn1['link_location']; ?>"><?php echo $btn1['link_text']; ?></a>
+						<a class="blue" href="<?php echo $btn1['link_location']; ?>"><?php echo $btn1['link_text']; ?></a>
 					<?php endif; ?>
 					<?php if ( $btn2 ) : ?>
-						<a href="<?php echo $btn2['link_location']; ?>"><?php echo $btn2['link_text']; ?></a>
+						<a class="blue" href="<?php echo $btn2['link_location']; ?>"><?php echo $btn2['link_text']; ?></a>
 					<?php endif; ?>
 				</div>
 			</div>
