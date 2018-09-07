@@ -8,7 +8,7 @@
  */
 ?>
 <div class="container-outer about">
-  <div class="container-inner bg-offwhite" <?php if( get_field('about_background') ) : ?> style="background-image:url('<?php $wpImg = wp_get_attachment_image_src( get_field('about_background'), 'large'); echo $wpImg[0]; ?>');"<?php endif; ?>>
+  <div class="container-inner bg-offwhite" <?php if( get_field('about_background') ) : ?> style="background-image:url('<?php $wpImg = wp_get_attachment_image_src( get_field('about_background'), 'large'); echo $wpImg[0]; ?>');background-repeat:no-repeat;background-position:right;"<?php endif; ?>>
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-6">

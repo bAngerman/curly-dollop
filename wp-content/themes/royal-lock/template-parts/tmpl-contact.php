@@ -10,7 +10,7 @@
 //TODO: object data the address
 ?>
 
-<div class="container-outer">
+<div class="container-outer contact">
   <div class="container-inner bg-l-gray">
     <div class="container">
       <div class="row d-center">
@@ -40,7 +40,7 @@
             <?php endwhile; ?>
           </div>
         </section>
-        <section class="contact-us col-12 col-md-5">
+        <section class="contact-us col-12 col-md-5 offset-md-2">
           <h3>Get in touch with us:</h3>
           <?php echo do_shortcode('[contact-form-7 id="128"]'); ?>
         </section>

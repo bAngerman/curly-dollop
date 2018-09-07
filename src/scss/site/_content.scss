@@ -1,7 +1,7 @@
 /*! Custom Home Page for Royal Lock */
 
 $fadeInTiming: 0.5s;
-$skew: 5deg;
+$skew: 3.5deg;
 
 .dom-ready {
   @include transition(all $fadeInTiming ease-in-out);
@@ -73,6 +73,13 @@ a {
 
       &.bg-l-gray {
         background-color: $bg-l-gray;
+      }
+      &.bg-offwhite {
+        background-color: $white;
+      }
+
+      &.contact {
+        padding-bottom: 0;
       }
 
     }
@@ -178,6 +185,9 @@ p:last-of-type {
 }
 
 #about {
+  margin-bottom: 2rem;
+
+  
   h2 {
     border-color: $red;
   }
@@ -293,6 +303,9 @@ p:last-of-type {
   }
   .wpcf7-text, .wpcf7-textarea {
     padding: 0.25rem;
+  }
+  .wpcf7-submit {
+    cursor: pointer;
   }
 }
 
